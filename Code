@@ -1,0 +1,13 @@
+from pytube import YouTube
+from sys import argv
+for i in range (100000):
+    link = argv[0]
+    yt = YouTube(input("Enter your link: "))
+
+    print("Title of the video: ", yt.title)
+
+    print("Views: ", yt.views)
+
+    yd = yt.streams.get_highest_resolution()
+
+    yd.download('C:\\Users\Public\Downloads')
